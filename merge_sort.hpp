@@ -3,15 +3,6 @@
 #include <cstdlib> // size_t, malloc
 #include <cstring> // memcpy
 
-void afro_swap(void* a, void* b, size_t size)
-{
-    char *c = (char*)malloc(size);
-    memcpy(c,a,size);
-    memcpy(a,b,size);
-    memcpy(b,c,size);
-    free(c);
-}
-
 void _merge(void* base, void* left, void* right, size_t middle, size_t middle2, size_t size, int((*compare)(const void*, const void*)))
 {
     size_t i, j, k;
